@@ -81,7 +81,7 @@ packages = ["."]
 [tool.comfy]
 PublisherId = "ericrollei"
 DisplayName = "Eric's Semantic Search"
-Icon = "🔍"
+Icon = ""
 
 [tool.black]
 line-length = 100
