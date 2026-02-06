@@ -39,6 +39,12 @@ Unlike traditional filename or tag-based search, semantic search understands the
 - "minimalist product photography"
 - "vintage film aesthetic"
 
+### Video Overview
+
+[![Eric's Semantic Search for ComfyUI - Video Overview](https://img.youtube.com/vi/JWbqSKwtwho/maxresdefault.jpg)](https://youtu.be/JWbqSKwtwho)
+
+> 📹 *Click the image above to watch the full video overview showing semantic search in action within ComfyUI.*
+
 ---
 
 ## How It Works
