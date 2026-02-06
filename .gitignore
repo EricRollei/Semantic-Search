@@ -1,0 +1,86 @@
+# Eric's Semantic Search - Git Ignore
+
+# Development and testing
+dev/
+tests/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+*.manifest
+*.spec
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+indexer_venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local history
+.history/
+
+# Compiled files
+*.pyc
+*.pyo
+
+# Logs
+*.log
+
+# Model files (large, should be downloaded separately)
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Index data (user-specific)
+# indexes/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# pytest
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+
+# Batch files for local development
+run_indexer.bat
+run_interactive_indexer.bat
+setup_indexer_venv.bat

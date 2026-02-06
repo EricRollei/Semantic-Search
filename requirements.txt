@@ -1,0 +1,35 @@
+# Core dependencies for Eric's Semantic Search
+
+# Vector search
+faiss-cpu>=1.7.4
+
+# Image processing
+Pillow>=10.0.0
+pillow-heif>=0.14.0
+
+# Numerical computing
+numpy>=1.24.0
+
+# Qwen VL utilities (required for image/video processing)
+qwen-vl-utils>=0.0.8
+
+# Optional: RAW file support
+# rawpy>=0.18.0
+
+# Optional: PDF document support (may already be installed in ComfyUI)
+# pymupdf>=1.23.0
+
+# Optional: Video support
+# opencv-python-headless>=4.8.0
+
+# ML dependencies (should already be installed in ComfyUI)
+# torch>=2.10.0  # 2.10+ recommended for optimal performance
+# transformers>=4.45.0
+# accelerate>=0.25.0
+
+# Optional: Flash attention for faster inference (requires CUDA)
+# pip install flash-attn --no-build-isolation
+
+# NOTE: PyTorch 2.9.x has a 3D convolution performance regression.
+# Upgrade to PyTorch 2.10+ for optimal indexing speed.
+# See: https://github.com/pytorch/pytorch/issues/166122

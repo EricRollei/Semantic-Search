@@ -1,0 +1,109 @@
+[project]
+name = "comfyui-eric-semantic-search"
+version = "1.5.0"
+description = "Semantic image, video, and document search for ComfyUI using Qwen3-VL multimodal embeddings"
+readme = "README.md"
+license = { text = "CC-BY-NC-4.0" }
+requires-python = ">=3.10"
+authors = [
+    { name = "Eric Hiss", email = "eric@rollei.us" }
+]
+keywords = [
+    "comfyui",
+    "semantic-search",
+    "image-search",
+    "multimodal",
+    "embeddings",
+    "qwen3-vl",
+    "faiss",
+    "vector-search",
+    "video-search",
+    "document-search"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+
+dependencies = [
+    "faiss-cpu>=1.7.4",
+    "Pillow>=10.0.0",
+    "pillow-heif>=0.14.0",
+    "qwen-vl-utils>=0.0.8",
+    "numpy>=1.24.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+]
+raw = [
+    "rawpy>=0.18.0",
+]
+pdf = [
+    "pymupdf>=1.23.0",
+]
+video = [
+    "opencv-python-headless>=4.8.0",
+]
+all = [
+    "rawpy>=0.18.0",
+    "pymupdf>=1.23.0",
+    "opencv-python-headless>=4.8.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/EricRollei/Semantic-Search"
+Repository = "https://github.com/EricRollei/Semantic-Search"
+Issues = "https://github.com/EricRollei/Semantic-Search/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[tool.comfy]
+PublisherId = "ericrollei"
+DisplayName = "Eric's Semantic Search"
+Icon = "🔍"
+
+[tool.black]
+line-length = 100
+target-version = ['py310', 'py311', 'py312']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+    | \.venv
+    | __pycache__
+    | dev
+    | \.history
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+skip = [".git", ".venv", "__pycache__", "dev", ".history"]
+
+[tool.pytest.ini_options]
+testpaths = ["dev"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
